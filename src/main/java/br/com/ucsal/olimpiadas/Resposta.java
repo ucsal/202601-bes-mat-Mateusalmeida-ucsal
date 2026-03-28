@@ -26,6 +26,12 @@ public class Resposta {
 		return correta;
 	}
 
+	// Mantido para compatibilidade com código existente (App.java)
+	public void setCorreta(boolean correta) {
+		this.correta = correta;
+	}
+
+	// Melhorias de encapsulamento (SRP)
 	public void marcarComoCorreta() {
 		this.correta = true;
 	}
@@ -33,5 +39,4 @@ public class Resposta {
 	public void marcarComoIncorreta() {
 		this.correta = false;
 	}
-
 }
