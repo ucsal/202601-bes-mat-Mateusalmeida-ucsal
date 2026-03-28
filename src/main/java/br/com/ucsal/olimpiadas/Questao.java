@@ -61,7 +61,15 @@ public class Questao {
 	}
 
 	public void setAlternativaCorreta(char alternativaCorreta) {
+		validarAlternativa(alternativaCorreta);
 		this.alternativaCorreta = normalizar(alternativaCorreta);
+	}
+
+	private void validarAlternativa(char c) {
+		char up = Character.toUpperCase(c);
+		if (up < 'A' || up > 'E') {
+			throw new IllegalArgumentException("Alternativa inválida.");
+		}
 	}
 
 	public boolean isRespostaCorreta(char marcada) {
