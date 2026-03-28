@@ -73,7 +73,8 @@ public class Questao {
 	}
 
 	public boolean isRespostaCorreta(char marcada) {
-		return normalizar(marcada) == alternativaCorreta;
+		char respostaNormalizada = normalizar(marcada);
+		return respostaNormalizada == alternativaCorreta;
 	}
 
 	public static char normalizar(char c) {
