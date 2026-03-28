@@ -26,8 +26,12 @@ public class Resposta {
 		return correta;
 	}
 
-	public void setCorreta(boolean correta) {
-		this.correta = correta;
+	public void marcarComoCorreta() {
+		this.correta = true;
+	}
+
+	public void marcarComoIncorreta() {
+		this.correta = false;
 	}
 
 }
